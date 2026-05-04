@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Commercial Plumbing & Drain Service | Gianni Plumbing & Drain</title>
     <meta name="description" content="Commercial drain cleaning, hydro jetting, grease trap service, pumping, storm drains, inspections, sewer repairs, and maintenance programs.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
@@ -34,32 +35,41 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="container section-heading">
+      <section class="section section--cards">
+        <div class="container section-heading section-heading--left">
           <p class="eyebrow">Built for business hours</p>
           <h2>Service that protects operations</h2>
           <p>Commercial plumbing problems can close doors. These services are organized for quick triage, clear documentation, and practical maintenance.</p>
         </div>
-        <div class="container card-grid card-grid--three">
-          <article id="floor-drains" class="service-card"><span>01</span><h3>Floor Drain Cleaning</h3><p>Clear floor drains in kitchens, restrooms, utility rooms, mechanical spaces, and common areas.</p></article>
-          <article id="storm-drains" class="service-card"><span>02</span><h3>Storm & Catch Basin Cleaning</h3><p>Remove debris and buildup before heavy rain turns exterior drainage into a property issue.</p></article>
-          <article class="service-card"><span>03</span><h3>Commercial Hydro Jetting</h3><p>Clean grease, sludge, and scale from high-use lines with high-pressure water service.</p></article>
-          <article class="service-card"><span>04</span><h3>Drain & Sewer Inspection</h3><p>Document pipe conditions before repairs, tenant turnover, purchases, or recurring backups.</p></article>
-          <article id="grease-traps" class="service-card"><span>05</span><h3>Grease Trap Service</h3><p>Support restaurant and hospitality teams with cleaning schedules and backup prevention.</p></article>
-          <article class="service-card"><span>06</span><h3>Pumping Services</h3><p>Coordinate service for pits, basins, drains, and systems that need scheduled removal.</p></article>
-          <article class="service-card"><span>07</span><h3>Drain Repairs</h3><p>Repair damaged drains, leaking assemblies, failed connections, and worn commercial piping.</p></article>
-          <article class="service-card"><span>08</span><h3>Sewer Repair & Cleaning</h3><p>Handle backups, obstructions, root intrusion, and replacement planning for building sewers.</p></article>
-          <article id="maintenance" class="service-card"><span>09</span><h3>Maintenance Programs</h3><p>Recurring visits tailored to usage, risk, and the cost of downtime for your property.</p></article>
+        <div class="container commercial-service-board">
+          <section class="service-group" aria-labelledby="commercial-response">
+            <h3 id="commercial-response">Drain response</h3>
+            <article id="floor-drains" class="service-line"><span>01</span><div><h4>Floor Drain Cleaning</h4><p>Kitchens, restrooms, utility rooms, mechanical spaces, and common areas.</p></div></article>
+            <article id="storm-drains" class="service-line"><span>02</span><div><h4>Storm & Catch Basin Cleaning</h4><p>Exterior drainage cleared before heavy rain creates property issues.</p></div></article>
+            <article class="service-line"><span>03</span><div><h4>Commercial Hydro Jetting</h4><p>High-pressure cleaning for grease, sludge, scale, and high-use lines.</p></div></article>
+          </section>
+          <section class="service-group" aria-labelledby="commercial-repair">
+            <h3 id="commercial-repair">Inspection & repair</h3>
+            <article class="service-line"><span>04</span><div><h4>Drain & Sewer Inspection</h4><p>Pipe-condition documentation for repairs, purchases, or recurring backups.</p></div></article>
+            <article class="service-line"><span>05</span><div><h4>Drain Repairs</h4><p>Damaged drains, leaking assemblies, failed connections, and worn piping.</p></div></article>
+            <article class="service-line"><span>06</span><div><h4>Sewer Repair & Cleaning</h4><p>Backups, obstructions, root intrusion, and replacement planning.</p></div></article>
+          </section>
+          <section class="service-group" aria-labelledby="commercial-planned">
+            <h3 id="commercial-planned">Planned service</h3>
+            <article id="grease-traps" class="service-line"><span>07</span><div><h4>Grease Trap Service</h4><p>Cleaning schedules and backup prevention for restaurant teams.</p></div></article>
+            <article class="service-line"><span>08</span><div><h4>Pumping Services</h4><p>Pits, basins, drains, and systems that need scheduled removal.</p></div></article>
+            <article id="maintenance" class="service-line"><span>09</span><div><h4>Maintenance Programs</h4><p>Recurring visits tailored to usage, risk, and downtime cost.</p></div></article>
+          </section>
         </div>
       </section>
 
       <section class="section section--muted split-section">
         <div class="container split">
-          <figure class="image-panel"><img src="https://images.pexels.com/photos/16509869/pexels-photo-16509869.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Technician repairing plumbing under a commercial sink"></figure>
+          <figure class="image-panel"><img src="https://images.pexels.com/photos/16509869/pexels-photo-16509869.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Technician repairing plumbing under a commercial sink" loading="lazy"></figure>
           <div>
             <p class="eyebrow">Who we serve</p>
             <h2>Restaurants, facilities, property managers, and contractors</h2>
-            <p>Gianni can be positioned as the plumbing partner that keeps nuisance calls, tenant complaints, and surprise backups from eating the schedule.</p>
+            <p>Commercial plumbing support should keep nuisance calls, tenant complaints, and surprise backups from eating the schedule.</p>
             <ul class="check-list">
               <li>Food service and hospitality</li>
               <li>Multi-family properties</li>
@@ -75,7 +85,7 @@
 
     <footer class="site-footer">
       <div class="container footer-grid"><div><a class="brand brand--footer" href="index.html"><span class="brand__mark">GP</span><span><strong>Gianni</strong><em>Plumbing & Drain</em></span></a><p>Emergency plumbing, drain cleaning, sewer repair, and commercial maintenance for local homes and businesses.</p></div><div><h2>Services</h2><a href="services.html">Residential Services</a><a href="commercial.html">Commercial Services</a><a href="common-clogs.html">Common Clogs</a><a href="why-gianni.html">Why Gianni</a></div><div><h2>Company</h2><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="site-map.html">Site Map</a></div><div><h2>Call Anytime</h2><a class="footer-phone" href="tel:15552197473">(555) 219-PIPE</a><p>Serving local homeowners, businesses, restaurants, and property managers.</p></div></div>
-      <div class="container footer-bottom"><span>Copyright 2026 Gianni Plumbing & Drain. All rights reserved.</span><span>Placeholder content and contact details should be replaced before launch.</span></div>
+      <div class="container footer-bottom"><span>Copyright 2026 Gianni Plumbing & Drain. All rights reserved.</span><span>Fast local response. Clean work. Clear estimates.</span></div>
     </footer>
     <script src="assets/script.js"></script>
   </body>
