@@ -229,6 +229,12 @@ textarea {
   max-width: min(820px, calc(100vw - 32px));
 }
 
+.mega-menu--wide.mega-menu--commercial {
+  grid-template-columns: minmax(220px, 235px) minmax(220px, 235px);
+  gap: 6px 12px;
+  max-width: min(520px, calc(100vw - 32px));
+}
+
 .mega-col {
   display: grid;
   align-content: start;
@@ -940,6 +946,18 @@ h3 {
 .commercial-service-board {
   column-count: 2;
   column-gap: 18px;
+}
+
+.commercial-service-board--balanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 18px;
+  column-count: auto;
+}
+
+.commercial-service-board--balanced .service-group {
+  height: 100%;
+  margin: 0;
 }
 
 .service-group {
@@ -1812,6 +1830,11 @@ cite {
   .mega-menu--wide {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .mega-menu--wide.mega-menu--commercial {
+    grid-template-columns: 1fr;
+    max-width: none;
   }
 
   .mega-col {

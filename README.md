@@ -16,7 +16,7 @@ Recommended GitHub Pages settings:
 
 - `/` — home (`index.html`)
 - `/drain-and-sewer-services/` — residential service hub with sub-pages for drain cleaning, hydro jetting, inspection, sewer repair, exterior drains, septic, and more
-- `/commercial-service/` — commercial service hub with sub-pages for floor drains, storm drains, hydro jetting, sewer service, pump repair, and maintenance programs
+- `/commercial-service/` — commercial service hub with sub-pages for floor drains, storm drains, hydro jetting, sewer service, and maintenance programs
 - `about.html`, `faq.html`, `contact.html`, `common-clogs.html`, `why-honest-drain.html`, `site-map.html`
 - `sitemap.xml`, `robots.txt`, `404.html`
 
