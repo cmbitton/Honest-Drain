@@ -139,12 +139,12 @@
     mobileAction.className = "mobile-action-bar";
     mobileAction.setAttribute("aria-label", "Quick service actions");
     mobileAction.setAttribute("aria-hidden", "true");
-    mobileAction.innerHTML = '<a class="mobile-action-bar__book" href="contact.html">Book</a><a class="mobile-action-bar__call" href="tel:14015935553">Call</a>';
+    mobileAction.innerHTML = '<a class="mobile-action-bar__call" href="tel:14015935553">Call Now</a><a class="mobile-action-bar__book" href="contact.html">Book Online</a>';
     body.appendChild(mobileAction);
     var mobileActionLinks = mobileAction.querySelectorAll("a");
 
     var updateMobileAction = function () {
-      var shouldShow = window.innerWidth <= 580 && window.scrollY > Math.max(520, window.innerHeight * 0.85);
+      var shouldShow = window.innerWidth <= 768 && window.scrollY > Math.max(420, window.innerHeight * 0.7);
       mobileAction.classList.toggle("is-visible", shouldShow);
       body.classList.toggle("has-mobile-action", shouldShow);
       mobileAction.setAttribute("aria-hidden", String(!shouldShow));
