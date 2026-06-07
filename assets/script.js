@@ -189,14 +189,4 @@
     }
   });
 
-  var form = document.querySelector(".contact-form");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var note = form.querySelector(".form-note");
-      if (note) {
-        note.textContent = "Thanks. Please call for urgent service while the online booking connection is being finalized.";
-      }
-    });
-  }
 })();

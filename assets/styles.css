@@ -783,7 +783,7 @@ h3 {
 .callout-list > div,
 .faq-item,
 .sitemap-grid > div,
-.contact-form {
+.contact-booking {
   min-width: 0;
   background: #fff;
   border: 1px solid #cfdbe5;
@@ -1678,46 +1678,12 @@ cite {
   align-items: start;
 }
 
-.contact-form {
+.contact-booking {
   display: grid;
   gap: 16px;
   padding: clamp(24px, 4vw, 36px);
   border-radius: var(--radius);
   background: var(--soft);
-}
-
-.form-row {
-  display: grid;
-  gap: 7px;
-  min-width: 0;
-}
-
-.form-row label {
-  font-weight: 900;
-  color: var(--blue);
-}
-
-.form-row input,
-.form-row select,
-.form-row textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #fff;
-  padding: 12px 13px;
-  color: var(--ink);
-  transition: border-color 160ms ease, box-shadow 160ms ease;
-}
-
-.form-row input:focus-visible,
-.form-row select:focus-visible,
-.form-row textarea:focus-visible {
-  border-color: var(--blue-2);
-  box-shadow: 0 0 0 4px rgba(13, 90, 167, 0.12);
-}
-
-.form-row textarea {
-  resize: vertical;
 }
 
 .form-note {
@@ -2624,7 +2590,7 @@ cite {
     padding: 16px 18px;
   }
 
-  .contact-form {
+  .contact-booking {
     padding-right: 16px;
     padding-left: 16px;
   }
