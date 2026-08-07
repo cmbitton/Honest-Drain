@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  var form = document.querySelector("#main-sewer-lead-form");
-  var stickyCall = document.querySelector(".ad-mobile-call");
+  var form = document.querySelector("#main-sewer-lemsl-form");
+  var stickyCall = document.querySelector(".msl-mobile-call");
   var startedAt = Date.now();
   var formStarted = false;
 
@@ -33,7 +33,7 @@
     stickyCall.classList.toggle("is-visible", show);
     stickyCall.setAttribute("aria-hidden", String(!show));
     stickyCall.setAttribute("tabindex", show ? "0" : "-1");
-    document.body.classList.toggle("ad-sticky-visible", show);
+    document.body.classList.toggle("msl-sticky-visible", show);
   }
 
   window.addEventListener("scroll", updateStickyCall, { passive: true });
@@ -42,7 +42,7 @@
 
   var audienceButtons = document.querySelectorAll("[data-audience]");
   var audienceNote = document.querySelector("#audience-note");
-  var businessField = document.querySelector(".ad-business-field");
+  var businessField = document.querySelector(".msl-business-field");
 
   function setAudience(audience, updateForm) {
     audienceButtons.forEach(function (button) {
@@ -191,7 +191,7 @@
   function setFieldError(name, message) {
     var error = document.getElementById(errorIds[name]);
     var field = form.querySelector("[name='" + name + "']");
-    var wrapper = field && field.closest(".ad-field, .ad-fieldset");
+    var wrapper = field && field.closest(".msl-field, .msl-fieldset");
     if (error) error.textContent = message || "";
     if (wrapper) wrapper.classList.toggle("is-invalid", Boolean(message));
     if (field) field.setAttribute("aria-invalid", String(Boolean(message)));
@@ -240,7 +240,7 @@
 
   function setStatus(type, html) {
     var status = document.getElementById("form-status");
-    status.className = "ad-form-status ad-form-status--" + type;
+    status.className = "msl-form-status msl-form-status--" + type;
     status.innerHTML = html;
     status.focus();
   }
