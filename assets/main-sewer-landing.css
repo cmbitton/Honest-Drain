@@ -1247,17 +1247,17 @@
 
   .msl-trust {
     grid-template-columns: 1fr;
-    margin-top: 14px;
+    margin-top: 18px;
   }
 
   .msl-trust li {
-    min-height: 40px;
-    padding: 8px 10px 8px 32px;
+    min-height: 44px;
+    padding: 10px 10px 10px 32px;
     font-size: 0.77rem;
   }
 
   .msl-trust li::before {
-    top: 16px;
+    top: 18px;
     left: 13px;
   }
 
@@ -1271,13 +1271,14 @@
 
   .msl-hero__symptoms {
     grid-template-columns: 1fr;
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 0;
+    gap: 14px;
+    margin-top: 24px;
+    padding-top: 22px;
   }
 
   .msl-urgent {
-    margin-top: -10px;
+    margin-top: 24px;
+    padding: 16px;
   }
 
   .msl-section {
