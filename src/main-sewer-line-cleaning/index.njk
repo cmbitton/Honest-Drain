@@ -55,7 +55,6 @@ schema:
 
           <div class="msl-actions">
             <a class="msl-button msl-button--primary" href="tel:14015935553" data-call-placement="hero">Call (401) 593-5553</a>
-            <a class="msl-button msl-button--secondary" href="#callback-form">Request a Call Back</a>
           </div>
           <p class="msl-availability">Weekend main sewer service available. Free on-site estimates before 8 PM. Call to confirm current availability.</p>
 
@@ -193,160 +192,6 @@ schema:
       </div>
     </section>
 
-    <section class="msl-section msl-section--tint" aria-labelledby="boundaries-heading">
-      <div class="msl-container">
-        <div class="msl-section-heading">
-          <p class="msl-eyebrow">A focused paid service</p>
-          <h2 id="boundaries-heading">Know What This Page Covers</h2>
-        </div>
-        <div class="msl-boundaries">
-          <div>
-            <h3>This paid page covers</h3>
-            <ul class="msl-check-list">
-              <li>Main sewer and building-drain clearing</li>
-              <li>Root cutting when appropriate</li>
-              <li>Camera inspection or recording when useful</li>
-              <li>Locating and hydro jetting when appropriate</li>
-              <li>Residential and light-commercial properties</li>
-            </ul>
-          </div>
-          <div>
-            <h3>This paid page does not cover</h3>
-            <ul class="msl-no-list">
-              <li>Septic pumping or septic-system repair</li>
-              <li>Sewage cleanup, water mitigation, or restoration</li>
-              <li>Excavation, lining, sewer replacement, or municipal work</li>
-              <li>General plumbing, fixtures, water heaters, or remodel work</li>
-              <li>Storm-drain construction, catch basins, or unrelated exterior drainage</li>
-            </ul>
-          </div>
-        </div>
-        <p class="msl-service-area"><strong>Service area:</strong> Based in Cranston and serving homes and businesses across nearby Rhode Island communities. Selected nearby Massachusetts service may be available when the location, sewer connection, schedule, and job scope fit.</p>
-      </div>
-    </section>
-
-    <section class="msl-section msl-form-section" id="callback-form" aria-labelledby="form-heading">
-      <div class="msl-container msl-form-layout">
-        <div class="msl-form-intro">
-          <p class="msl-eyebrow">Cannot call right now?</p>
-          <h2 id="form-heading">Request a Call Back</h2>
-          <p>Share the details we need to confirm whether the job, location, authority, timing, and current schedule fit Honest Drain.</p>
-          <div class="msl-call-first">
-            <strong>For an active backup, call first.</strong>
-            <a href="tel:14015935553" data-call-placement="form">(401) 593-5553</a>
-          </div>
-        </div>
-
-        <form class="msl-lemsl-form" id="main-sewer-lemsl-form" method="post" action="{{ '/api/main-sewer-leads' | url }}" novalidate>
-          <div class="msl-honeypot" aria-hidden="true">
-            <label for="website">Website</label>
-            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-          </div>
-          <input type="hidden" name="form_started_at" value="">
-          <input type="hidden" name="submission_token" value="">
-          <input type="hidden" name="landing_page_url" value="">
-          <input type="hidden" name="referrer" value="">
-          <input type="hidden" name="first_landing_timestamp" value="">
-          <input type="hidden" name="gclid" value="">
-          <input type="hidden" name="gbraid" value="">
-          <input type="hidden" name="wbraid" value="">
-          <input type="hidden" name="campaign" value="">
-          <input type="hidden" name="ad_group" value="">
-          <input type="hidden" name="keyword" value="">
-          <input type="hidden" name="match_type" value="">
-          <input type="hidden" name="device" value="">
-          <input type="hidden" name="utm_source" value="">
-          <input type="hidden" name="utm_medium" value="">
-          <input type="hidden" name="utm_campaign" value="">
-          <input type="hidden" name="utm_term" value="">
-          <input type="hidden" name="utm_content" value="">
-
-          <fieldset class="msl-fieldset" data-field-group="property_type">
-            <legend>Property type <span aria-hidden="true">*</span></legend>
-            <div class="msl-radio-row">
-              <label><input type="radio" name="property_type" value="Home" required checked> <span>Home</span></label>
-              <label><input type="radio" name="property_type" value="Business"> <span>Business</span></label>
-              <label><input type="radio" name="property_type" value="Multifamily / managed property"> <span>Multifamily / managed property</span></label>
-            </div>
-            <p class="msl-field-error" id="property-type-error"></p>
-          </fieldset>
-
-          <div class="msl-field msl-field--full">
-            <label for="backing-up">What is backing up? <span aria-hidden="true">*</span></label>
-            <textarea id="backing-up" name="symptoms" rows="4" required placeholder="Tell us which fixtures or drains are affected and whether water or sewage is rising."></textarea>
-            <p class="msl-field-error" id="symptoms-error"></p>
-          </div>
-
-          <div class="msl-field">
-            <label for="town">Town <span aria-hidden="true">*</span></label>
-            <select id="town" name="town" required>
-              <option value="">Select a town</option>
-              <option>Cranston</option><option>Warwick</option><option>Providence</option><option>East Providence</option><option>Johnston</option><option>North Providence</option><option>Pawtucket</option><option>West Warwick</option><option>Coventry</option><option>East Greenwich</option><option>North Kingstown</option><option>Barrington</option><option>Bristol</option><option>Warren</option><option>Seekonk</option><option>Rehoboth</option><option>Swansea</option><option>Walpole</option><option>Sharon</option><option>Little Compton</option><option>Other</option>
-            </select>
-            <p class="msl-field-error" id="town-error"></p>
-          </div>
-
-          <fieldset class="msl-fieldset" data-field-group="sewer_connection">
-            <legend>Sewer connection <span aria-hidden="true">*</span></legend>
-            <div class="msl-radio-row">
-              <label><input type="radio" name="sewer_connection" value="Municipal sewer" required> <span>Municipal sewer</span></label>
-              <label><input type="radio" name="sewer_connection" value="Septic"> <span>Septic</span></label>
-              <label><input type="radio" name="sewer_connection" value="Not sure"> <span>Not sure</span></label>
-            </div>
-            <p class="msl-field-error" id="sewer-connection-error"></p>
-          </fieldset>
-
-          <fieldset class="msl-fieldset" data-field-group="timing">
-            <legend>Timing <span aria-hidden="true">*</span></legend>
-            <div class="msl-radio-row">
-              <label><input type="radio" name="timing" value="Active backup now" required> <span>Active backup now</span></label>
-              <label><input type="radio" name="timing" value="Today / next available"> <span>Today / next available</span></label>
-              <label><input type="radio" name="timing" value="Schedule ahead"> <span>Schedule ahead</span></label>
-            </div>
-            <p class="msl-field-error" id="timing-error"></p>
-          </fieldset>
-
-          <fieldset class="msl-fieldset" data-field-group="authority">
-            <legend>Authority <span aria-hidden="true">*</span></legend>
-            <div class="msl-radio-row">
-              <label><input type="radio" name="authority" value="Owner" required> <span>Owner</span></label>
-              <label><input type="radio" name="authority" value="Authorized manager"> <span>Authorized manager</span></label>
-              <label><input type="radio" name="authority" value="Tenant / employee"> <span>Tenant / employee</span></label>
-            </div>
-            <p class="msl-field-error" id="authority-error"></p>
-          </fieldset>
-
-          <div class="msl-field">
-            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
-            <input id="full-name" name="name" type="text" autocomplete="name" required>
-            <p class="msl-field-error" id="name-error"></p>
-          </div>
-          <div class="msl-field">
-            <label for="phone">Phone <span aria-hidden="true">*</span></label>
-            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(401) 555-0123">
-            <p class="msl-field-error" id="phone-error"></p>
-          </div>
-          <div class="msl-field">
-            <label for="email">Email <span>(optional)</span></label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email">
-            <p class="msl-field-error" id="email-error"></p>
-          </div>
-          <div class="msl-field msl-business-field" hidden>
-            <label for="company">Company or property name</label>
-            <input id="company" name="company" type="text" autocomplete="organization">
-            <p class="msl-field-error" id="company-error"></p>
-          </div>
-
-          <div class="msl-form-actions">
-            <button class="msl-button msl-button--primary" type="submit">Request a Call Back</button>
-            <p>Honest Drain will use these details to respond to your service request. This request does not confirm dispatch. See the <a href="{{ '/privacy-policy.html' | url }}">Privacy Policy</a>.</p>
-          </div>
-          <div class="msl-form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
-          <noscript><p class="msl-form-status msl-form-status--error">For the most reliable response, call <a href="tel:14015935553">(401) 593-5553</a>. Form status updates require JavaScript.</p></noscript>
-        </form>
-      </div>
-    </section>
-
     <section class="msl-section msl-section--tint" aria-labelledby="faq-heading">
       <div class="msl-container msl-faq-layout">
         <div>
@@ -374,7 +219,6 @@ schema:
         </div>
         <div class="msl-actions">
           <a class="msl-button msl-button--primary" href="tel:14015935553" data-call-placement="footer">Call (401) 593-5553</a>
-          <a class="msl-button msl-button--secondary-light" href="#callback-form">Request a Call Back</a>
         </div>
       </div>
     </section>

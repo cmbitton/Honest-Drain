@@ -49,15 +49,6 @@ Recommended Cloudflare Pages settings:
 - Root directory: repository root
 - Environment variable: `SITE_URL=https://example.com/` using the final production domain
 
-The paid `/main-sewer-line-cleaning/` callback form also requires these Cloudflare Pages settings before ads are activated:
-
-- KV binding: `MAIN_SEWER_LEADS` for rate controls and the 90-day auditable lead record
-- Secret: `MAIN_SEWER_LEAD_WEBHOOK_URL` for the operational inbox or CRM handoff
-- Optional secret: `MAIN_SEWER_LEAD_WEBHOOK_SECRET` for bearer authentication
-- Recommended secret: `MAIN_SEWER_ERROR_WEBHOOK_URL` for delivery/configuration alerts
-
-The endpoint fails closed when storage or delivery is not configured. It will not show a successful submission based on a browser event alone.
-
 If `SITE_URL` is not set, the build uses Cloudflare's `CF_PAGES_URL` when available. Local builds fall back to the project Pages URL placeholder in `src/_data/site.cjs`.
 
 ## GitHub Pages
