@@ -10,20 +10,24 @@
 
       gtag('config', 'AW-18369868858');
     </script>
-    <title>{{ title | safe }}</title>
+    <title>{{ (metaTitle or title) | safe }}</title>
     {% if description %}<meta name="description" content="{{ description | safe }}">{% endif %}
     {% if canonical %}<link rel="canonical" href="{{ canonical | absoluteUrl }}">{% endif %}
     <meta name="robots" content="{{ robots or 'index,follow' }}">
     {% if og != false %}
-    {% set metaTitle = ogTitle or title %}
+    {% set socialTitle = ogTitle or metaTitle or title %}
     {% set metaDescription = ogDescription or description %}
     {% set metaUrl = ogUrl or canonical %}
     {% set metaImage = ogImage or site.socialImage %}
-    {% set metaImageWidth = ogImageWidth or site.socialImageWidth %}
-    {% set metaImageHeight = ogImageHeight or site.socialImageHeight %}
+    {% set metaImageWidth = ogImageWidth %}
+    {% set metaImageHeight = ogImageHeight %}
+    {% if metaImage == site.socialImage %}
+    {% set metaImageWidth = metaImageWidth or site.socialImageWidth %}
+    {% set metaImageHeight = metaImageHeight or site.socialImageHeight %}
+    {% endif %}
     {% set metaImageAlt = ogImageAlt or site.socialImageAlt %}
     <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:title" content="{{ metaTitle | safe }}">
+    <meta property="og:title" content="{{ socialTitle | safe }}">
     {% if metaDescription %}<meta property="og:description" content="{{ metaDescription | safe }}">{% endif %}
     <meta property="og:type" content="{{ ogType or 'website' }}">
     {% if metaUrl %}<meta property="og:url" content="{{ metaUrl | absoluteUrl }}">{% endif %}
@@ -35,12 +39,18 @@
     {% if metaImageHeight %}<meta property="og:image:height" content="{{ metaImageHeight }}">{% endif %}
     {% if metaImageAlt %}<meta property="og:image:alt" content="{{ metaImageAlt }}">{% endif %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ metaTitle | safe }}">
+    <meta name="twitter:title" content="{{ socialTitle | safe }}">
     {% if metaDescription %}<meta name="twitter:description" content="{{ metaDescription | safe }}">{% endif %}
     <meta name="twitter:image" content="{{ metaImage | absoluteUrl }}">
     {% if metaImageAlt %}<meta name="twitter:image:alt" content="{{ metaImageAlt }}">{% endif %}
     {% endif %}
     {% endif %}
+    {% if ogType == 'article' %}
+    <meta property="article:published_time" content="{{ date | isoDate }}">
+    {% if updated %}<meta property="article:modified_time" content="{{ updated | isoDate }}">{% endif %}
+    {% if author %}<meta name="author" content="{{ author }}">{% endif %}
+    {% endif %}
+    <link rel="alternate" type="application/rss+xml" title="Honest Drain Blog" href="{{ '/feed.xml' | absoluteUrl }}">
     {{ headExtra | safe }}
     {% if preloadImageMobile %}<link rel="preload" as="image" href="{{ preloadImageMobile | url }}" media="(max-width: 640px)" fetchpriority="high">{% endif %}
     {% if preloadImage %}<link rel="preload" as="image" href="{{ preloadImage | url }}" media="(min-width: 641px)" fetchpriority="high">{% endif %}

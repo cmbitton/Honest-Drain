@@ -69,7 +69,8 @@
     { "label": "Why Honest Drain", "url": "/why-honest-drain.html" },
     { "label": "About", "url": "/about.html" },
     { "label": "FAQ", "url": "/faq.html" },
-    { "label": "Contact", "url": "/contact.html" }
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "Contact", "url": "/contact.html", "itemClass": "nav-contact" }
   ],
   "footerServices": [
     { "label": "Drain &amp; Sewer Services", "url": "/drain-and-sewer-services/" },
@@ -80,6 +81,7 @@
   "footerCompany": [
     { "label": "About", "url": "/about.html" },
     { "label": "FAQ", "url": "/faq.html" },
+    { "label": "Blog", "url": "/blog/" },
     { "label": "Contact", "url": "/contact.html" },
     { "label": "Site Map", "url": "/site-map.html" },
     { "label": "Privacy Policy", "url": "/privacy-policy.html" },

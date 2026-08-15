@@ -79,6 +79,29 @@ Each service URL resolves to a directory with an `index.html`, so the URLs read 
 - Service / OfferCatalog JSON-LD on service pages
 - LocalBusiness and WebSite JSON-LD on the home page
 - FAQPage JSON-LD on the FAQ page
+- BlogPosting JSON-LD, article sharing metadata, and an RSS feed for blog posts
+
+## Editing the Blog
+
+The blog uses [Pages CMS](https://app.pagescms.org), a browser-based editor for the Markdown files in this repository. There is no separate content database: edits are committed to GitHub and the existing Pages deployment rebuilds the site automatically.
+
+One-time setup for the repository owner:
+
+1. Sign in at `https://app.pagescms.org` with GitHub.
+2. Install the Pages CMS GitHub App for this repository.
+3. Invite the editor to the GitHub repository if they are not already a collaborator.
+4. Have the editor sign in to Pages CMS with their GitHub account and open this repository.
+
+The editor can then create, revise, upload images for, publish, and unpublish posts under **Blog posts**. New posts start as drafts; turn off **Keep as draft** to publish. Saving a change commits it to GitHub and triggers the normal deployment.
+
+Blog-related source:
+
+- `.pages.yml` — fields and media settings shown in the editor
+- `src/blog/posts/` — Markdown post files
+- `assets/images/blog/` — images uploaded in the editor
+- `src/blog/index.njk` — public post listing
+- `src/_includes/layouts/blog-post.njk` — public post design
+- `src/feed.xml.njk` — RSS feed at `/feed.xml`
 
 ## Demo Notes
 

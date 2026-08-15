@@ -1,0 +1,87 @@
+---
+layout: layouts/base.njk
+---
+<main id="main">
+  <section class="section--breadcrumb">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="{{ '/' | url }}">Home</a></li>
+          <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+          <li aria-current="page">{{ title }}</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <header class="blog-article__header">
+      <div class="container blog-article__hero">
+        <div>
+          <p class="eyebrow">{{ category }}</p>
+          <h1>{{ title }}</h1>
+          <p class="blog-article__dek">{{ description }}</p>
+          <div class="post-meta">
+            <span>By {{ author }}</span>
+            <time datetime="{{ date | isoDate }}">{{ date | postDate }}</time>
+            {% if updated %}<span>Updated {{ updated | postDate }}</span>{% endif %}
+          </div>
+        </div>
+        {% if image %}
+        <figure class="blog-article__cover">
+          <img src="{{ image | url }}" alt="{{ imageAlt }}" width="720" height="480">
+        </figure>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="container blog-article__layout">
+      <div class="article-prose">
+        {{ content | safe }}
+      </div>
+      <aside class="article-cta" aria-label="Get drain and sewer help">
+        <p class="eyebrow">Need a professional?</p>
+        <h2>Get an honest answer.</h2>
+        <p>Tell us what is happening and we will help you choose the right next step.</p>
+        <a class="button" href="{{ '/contact.html' | url }}">Book Online</a>
+        <a class="article-cta__phone" href="{{ site.phoneHref }}">Call {{ site.phoneDisplay }}</a>
+      </aside>
+    </div>
+  </article>
+
+  {% set relatedPosts = collections.blogPosts | excludeUrl(page.url) | limit(3) %}
+  {% if relatedPosts.length %}
+  <section class="section section--muted">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Keep reading</p>
+        <h2>More drain and sewer advice</h2>
+      </div>
+      <div class="blog-grid">
+        {% for post in relatedPosts %}
+        <article class="post-card">
+          {% if post.data.image %}<a class="post-card__image" href="{{ post.url | url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.data.image | url }}" alt="" loading="lazy" width="560" height="340"></a>{% endif %}
+          <div class="post-card__body">
+            <p class="eyebrow">{{ post.data.category }}</p>
+            <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+            <p>{{ post.data.description }}</p>
+            <time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | postDate }}</time>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="section section--compact">
+    <div class="container mini-cta">
+      <div>
+        <p class="eyebrow">Ready to solve the problem?</p>
+        <h2>Book drain or sewer service with a local team.</h2>
+        <p>Clear explanations, prepared equipment, and an honest next step.</p>
+      </div>
+      <div class="mini-cta__actions"><a class="button" href="{{ '/contact.html' | url }}">Book Online</a><a class="mini-cta__phone" href="{{ site.phoneHref }}">Call Now</a></div>
+    </div>
+  </section>
+</main>

@@ -20,7 +20,7 @@
         <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
           <ul>
             {% for item in navigation.primary %}
-            <li{% if item.columns %} class="has-menu"{% endif %}>
+            <li{% if item.columns or item.itemClass %} class="{% if item.columns %}has-menu{% endif %}{% if item.columns and item.itemClass %} {% endif %}{{ item.itemClass or '' }}"{% endif %}>
               <a href="{{ item.url | url }}" class="{% if item.columns %}has-menu__link{% endif %}{% if page.url | isActive(item.url) %}{% if item.columns %} {% endif %}is-active{% endif %}">{{ item.label | safe }}</a>
               {% if item.columns %}
               <div class="mega-menu {{ item.menuClass }}" role="menu">

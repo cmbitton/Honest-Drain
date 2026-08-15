@@ -1,0 +1,109 @@
+media:
+  - name: blog_images
+    label: Blog images
+    input: assets/images/blog
+    output: /assets/images/blog
+    rename: safe
+    categories: [image]
+
+content:
+  - name: blog_posts
+    label: Blog posts
+    type: collection
+    path: src/blog/posts
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, draft, date, category]
+      primary: title
+      sort: [date, title]
+      search: [title, description, category, body]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Post title
+        type: string
+        required: true
+        description: Keep it specific and useful; this also becomes the post URL when the post is created.
+        options:
+          minlength: 10
+          maxlength: 70
+      - name: description
+        label: Search description
+        type: text
+        required: true
+        description: A one- or two-sentence summary for search results and social sharing.
+        options:
+          minlength: 50
+          maxlength: 160
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: updated
+        label: Last updated
+        type: date
+        default: ""
+        description: Leave blank for a new post. Set this when making a meaningful update later.
+        options:
+          format: yyyy-MM-dd
+      - name: author
+        label: Author
+        type: string
+        required: true
+        default: Honest Drain Team
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Homeowner Tips
+            - Drain Cleaning
+            - Sewer Lines
+            - Commercial Drains
+            - Preventive Maintenance
+      - name: image
+        label: Cover image
+        type: image
+        required: true
+        options:
+          media: blog_images
+          categories: [image]
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: imageAlt
+        label: Cover image description
+        type: string
+        required: true
+        description: Briefly describe what is visible in the image for people using screen readers.
+        options:
+          minlength: 8
+          maxlength: 140
+      - name: draft
+        label: Keep as draft
+        type: boolean
+        default: true
+        description: Drafts are saved in the CMS but do not appear on the live site. Turn this off when the post is ready.
+      - name: body
+        label: Post content
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: blog_images
+          switcher: true
+          categories: [image]
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+settings:
+  commit:
+    templates:
+      create: "content(blog): add {filename}"
+      update: "content(blog): update {filename}"
+      delete: "content(blog): remove {filename}"
