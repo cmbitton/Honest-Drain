@@ -1,12 +1,13 @@
 ---
-title: "7 Signs Your Main Sewer Line May Be Clogged"
-description: "Learn the warning signs of a clogged main sewer line, what you can safely check, and when it is time to call a drain and sewer professional."
+title: 7 Signs Your Main Sewer Line May Be Clogged
+description: Learn the warning signs of a clogged main sewer line, what you can
+  safely check, and when it is time to call a drain and sewer professional.
 date: 2026-08-15
-updated: ""
 author: Honest Drain Team
 category: Sewer Lines
 image: /assets/images/service/sewer-camera-inspection.jpg
-imageAlt: Drain technician viewing the inside of a sewer line on camera inspection equipment
+imageAlt: Drain technician viewing the inside of a sewer line on camera
+  inspection equipment
 draft: false
 ---
 A slow sink usually points to a problem close to that fixture. When several drains start acting up at the same time, the main sewer line may be the shared cause.
