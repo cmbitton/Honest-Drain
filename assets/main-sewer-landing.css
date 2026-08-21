@@ -216,6 +216,96 @@
   font-size: 1.14rem;
 }
 
+.msl-coupon {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  max-width: 720px;
+  margin-top: 24px;
+  overflow: hidden;
+  color: var(--msl-navy-deep);
+  background: #fff;
+  border: 2px solid var(--msl-yellow);
+  border-radius: var(--msl-radius);
+  box-shadow: 0 10px 24px rgba(23, 19, 83, 0.12);
+}
+
+.msl-coupon::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(23, 19, 83, 0.34);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.msl-coupon__savings {
+  position: relative;
+  z-index: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 142px;
+  padding: 17px 20px;
+  color: var(--msl-navy-deep);
+  background: var(--msl-yellow);
+  line-height: 1;
+}
+
+.msl-coupon__savings strong {
+  font-size: 2.2rem;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.msl-coupon__savings span {
+  margin-left: 7px;
+  font-size: 0.88rem;
+  font-weight: 950;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.msl-coupon__details {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 3px;
+  padding: 17px 24px;
+}
+
+.msl-coupon__label {
+  color: var(--msl-teal);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.msl-coupon__details > strong {
+  color: var(--msl-navy-deep);
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.msl-coupon__details > span:last-child {
+  color: var(--msl-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.msl-coupon__action {
+  position: relative;
+  z-index: 1;
+  min-width: 178px;
+  min-height: 48px;
+  margin: 14px 16px 14px 0;
+  padding-right: 14px;
+  padding-left: 14px;
+  font-size: 0.88rem;
+}
+
 .msl-actions {
   display: flex;
   flex-wrap: wrap;
@@ -821,6 +911,48 @@
   display: none;
 }
 
+@media (max-width: 1100px) {
+  .msl-coupon {
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: stretch;
+    max-width: 610px;
+  }
+
+  .msl-coupon__savings {
+    grid-row: 1 / 3;
+    flex-direction: column;
+    min-width: 0;
+    padding: 16px 12px;
+  }
+
+  .msl-coupon__savings strong {
+    font-size: 1.9rem;
+  }
+
+  .msl-coupon__savings span {
+    margin: 5px 0 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .msl-coupon__details {
+    padding: 17px 18px 10px;
+  }
+
+  .msl-coupon__details > strong {
+    font-size: 1rem;
+  }
+
+  .msl-coupon__action {
+    grid-column: 2;
+    min-width: 0;
+    min-height: 44px;
+    margin: 0 16px 16px;
+  }
+}
+
 @media (max-width: 980px) {
   .msl-hero__grid {
     grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
@@ -908,6 +1040,37 @@
   .msl-hero__lead {
     margin-top: 14px;
     font-size: 0.99rem;
+  }
+
+  .msl-coupon {
+    grid-template-columns: 88px minmax(0, 1fr);
+    margin-top: 18px;
+  }
+
+  .msl-coupon__savings {
+    padding: 12px 8px;
+  }
+
+  .msl-coupon__savings strong {
+    font-size: 1.6rem;
+  }
+
+  .msl-coupon__details {
+    padding: 14px 14px 8px;
+  }
+
+  .msl-coupon__details > strong {
+    font-size: 0.96rem;
+  }
+
+  .msl-coupon__details > span:last-child {
+    font-size: 0.74rem;
+  }
+
+  .msl-coupon__action {
+    grid-column: 2;
+    margin: 0 12px 12px;
+    font-size: 0.8rem;
   }
 
   .msl-actions {
@@ -1073,6 +1236,37 @@
 
   .msl-sticky-visible .paid-landing {
     padding-bottom: calc(54px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 520px) {
+  .msl-coupon {
+    grid-template-columns: 1fr;
+  }
+
+  .msl-coupon__savings {
+    grid-row: auto;
+    flex-direction: row;
+    padding: 12px 16px;
+  }
+
+  .msl-coupon__savings strong {
+    font-size: 1.8rem;
+  }
+
+  .msl-coupon__savings span {
+    margin: 0 0 0 8px;
+  }
+
+  .msl-coupon__details {
+    grid-column: 1;
+    padding: 15px 16px 10px;
+    text-align: center;
+  }
+
+  .msl-coupon__action {
+    grid-column: 1;
+    margin: 0 12px 12px;
   }
 }
 
