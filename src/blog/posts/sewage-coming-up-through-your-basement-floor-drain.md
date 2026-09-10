@@ -7,10 +7,8 @@ author: Honest Drain Team
 category: Sewer Lines
 image: /assets/images/blog/img4190.jpg
 imageAlt: Honest Drain Work Van With Powersnake
-draft: true
+draft: false
 ---
-
-
 # Sewage Coming Up Through Your Basement Floor Drain? What Rhode Island Homeowners Should Do First
 
 If water or sewage is coming up through a basement floor drain, **stop flushing toilets and stop running water immediately**. Pause the washing machine and dishwasher. Keep people and pets away, and do not use chemical drain cleaners or loosen a cleanout cap.
