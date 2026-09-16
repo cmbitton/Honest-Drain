@@ -78,11 +78,7 @@ Cranston’s Department of Public Works states that the property owner is respon
 
 For a buyer, that changes the question from “Is the house on city sewer?” to “What is the condition of the pipe I will be responsible for?”
 
-Confirm the arrangement with the appropriate sewer authority for the property. Do not apply Cranston’s rules automatically to Providence, Warwick, or another community. Shared connections and unusual layouts also deserve specific questions.
-
-Simplified house-to-street diagram. The building lateral and street lateral are privately owned. The public sewer main is maintained by the city. The cleanout separates the two lateral sections. Not to scale.CleanoutStreetBuilding lateralPrivateStreet lateralPrivateSewer mainPublic
-
-Simplified Cranston arrangement. Not to scale. Confirm responsibility and routing for the specific property. [Source: City of Cranston.](https://www.cranstonri.gov/departments/public-works/sewer-maintenance/)
+[Source: City of Cranston.](https://www.cranstonri.gov/departments/public-works/sewer-maintenance/)
 
 ## The five things to request from a pre-purchase sewer inspection
 
@@ -172,7 +168,7 @@ Schedule early enough to receive the findings and arrange any necessary follow-u
 
 ## Buying in Cranston or a nearby Rhode Island community?
 
-Honest Drain & Sewer provides sewer camera inspections for property transactions in Cranston, Warwick, Providence, and nearby Rhode Island communities. We can discuss the available access, inspect accessible pipe, and explain the visible findings. Digital recordings are available on request; mention that you need one when booking.
+Honest Drain provides sewer camera inspections for property transactions in Cranston, Warwick, Providence, and nearby Rhode Island communities. We can discuss the available access, inspect accessible pipe, and explain the visible findings. Digital recordings are available on request; mention that you need one when booking.
 
 Call **[(401) 593-5553](tel:14015935553)** or [request a sewer camera inspection online](https://honestdrainandsewer.com/contact.html). Tell us the property location, that you are buying the home, and your inspection deadline so we can discuss scheduling and the right scope.
 
