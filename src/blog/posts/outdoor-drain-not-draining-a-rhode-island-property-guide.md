@@ -6,7 +6,7 @@ description: Outdoor drain still flooding after you clear the grate? Learn what
 date: 2026-09-22
 author: Honest Drain Team
 category: Preventive Maintenance
-image: /assets/images/blog/img4190.jpg
+image: /assets/images/blog/img4600.png
 imageAlt: Honest Drain service van parked beside a tree-lined residential property
 draft: false
 ---
