@@ -8,7 +8,7 @@ author: Honest Drain Team
 category: Preventive Maintenance
 image: /assets/images/blog/img4190.jpg
 imageAlt: Honest Drain service van parked beside a tree-lined residential property
-draft: true
+draft: false
 ---
 You rake the leaves off the drain. The grate looks clear. Then it rains again, and the same puddle spreads across the driveway.
 
@@ -58,14 +58,16 @@ A blocked outlet, a downstream restriction, or an infiltration area that cannot 
 
 Use these observations to describe the problem. They are clues for a service visit, not a diagnosis from a distance.
 
+
 | What you notice | What needs checking |
-| --- | --- |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
 | Leaves cover the grate, and water pools directly over it | The inlet and any debris immediately underneath |
 | The grate is clear, but the drain fills and overflows | Sediment in the basin, the connected pipe, and the discharge route |
 | Water collects beside the drain without reaching it | Pavement or soil slope, inlet position, and the path of runoff |
 | One drain overflows when another nearby drain receives water | Whether they share a restricted downstream line |
 | The problem appeared after landscaping or paving | Changed runoff paths, buried outlets, and possible construction debris or damage |
 | Flooding occurs only during unusually intense rain | Both maintenance condition and the system's capacity; a clean drain can still be overwhelmed |
+
 
 Try to note whether this is new behavior. A driveway that drained well for years and now floods after ordinary rain presents a different starting point from a low area that has always held water.
 
